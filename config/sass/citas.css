@@ -213,21 +213,19 @@ header .logo {
   width: 40%;
   height: 100%;
   position: relative;
-  top: -10px;
+  top: 30px;
   left: 10px;
 }
 header .logo img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  width: 50px;
-  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: auto;
+  height: 90px;
   margin-bottom: 4px;
 }
 header .logo .logo__title {
-  display: block;
-  width: 100%;
+  display: inline-block;
+  width: auto;
   font-weight: 700;
   font-size: 1rem;
   color: rgb(255, 255, 255);
@@ -525,14 +523,15 @@ footer .copy {
 @media screen and (min-width: 480px) {
   header .logo {
     flex-wrap: nowrap;
+    align-items: center;
+    width: 50%;
+    top: 10px;
   }
   header .logo img {
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: center;
        object-position: center;
-    width: 90px;
-    height: 60px;
     margin-bottom: 4px;
   }
   header .logo .logo__title {
@@ -589,7 +588,6 @@ footer .copy {
   }
   header .logo .logo__title {
     display: block;
-    width: 100%;
     font-weight: 700;
     font-size: 1rem;
     color: rgb(255, 255, 255);
@@ -705,6 +703,9 @@ footer .copy {
   header .menu .menu__list .menu__item .link__active {
     border-bottom: 1px solid rgb(255, 255, 255);
     background-color: transparent;
+  }
+  .bannerIndex {
+    padding-top: 20px;
   }
   .bannerIndex .bannerIndex__txt .max-titulo {
     font-size: 3.8rem;
@@ -1072,4 +1073,225 @@ footer .copy {
     text-align: center;
     width: 17%;
   }
-}/*# sourceMappingURL=conocenos.css.map */
+}
+.cites {
+  margin: auto;
+  width: 100%;
+}
+.cites .titulo {
+  padding: 16px;
+}
+.cites .texto {
+  margin-bottom: 15px;
+  padding: 5px;
+}
+.cites .texto strong {
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+.cites .texto a {
+  color: rgb(0, 48, 75);
+  font-weight: 700;
+  text-decoration: none;
+}
+.cites .cites__form {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.cites .cites__form hgroup {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+  background-color: rgb(0, 48, 75);
+  color: rgb(255, 255, 255);
+  padding: 10px;
+}
+.cites .cites__form hgroup .texto {
+  padding: 0;
+}
+.cites .cites__form form {
+  width: 100%;
+  margin: auto;
+  padding: 5px;
+}
+.cites .cites__form form .form__item--container {
+  margin-bottom: 20px;
+  border: none;
+  box-shadow: 0px 3px 5px 10px rgba(0, 0, 0, 0.0666666667);
+}
+.cites .cites__form form .form__item--container legend {
+  font-size: 1.1rem;
+  padding: 5px;
+  text-transform: uppercase;
+  background-color: rgb(255, 255, 255);
+}
+.cites .cites__form form .form__item--container .form__item--FlexContainer {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  align-content: center;
+  flex-flow: row wrap;
+}
+.cites .cites__form form .form__item--container .form__item--FlexContainer .item__form {
+  width: 100%;
+  padding: 5px;
+}
+.cites .cites__form form .form__item--container .form__item--FlexContainer .item__form label {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  font-size: 1.1rem;
+}
+.cites .cites__form form .form__item--container .form__item--FlexContainer .item__form input, .cites .cites__form form .form__item--container .form__item--FlexContainer .item__form textarea {
+  width: 100%;
+  padding: 3px 6px;
+  border: none;
+  border-bottom: 1px solid rgb(76, 144, 205);
+  outline: none;
+  transition: border-bottom 0.3s;
+  font-size: 1.1rem;
+}
+.cites .cites__form form .form__item--container .form__item--FlexContainer .item__form input::-moz-placeholder, .cites .cites__form form .form__item--container .form__item--FlexContainer .item__form textarea::-moz-placeholder {
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.cites .cites__form form .form__item--container .form__item--FlexContainer .item__form input::placeholder, .cites .cites__form form .form__item--container .form__item--FlexContainer .item__form textarea::placeholder {
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.cites .cites__form form .form__item--container .form__item--FlexContainer .item__form input:valid, .cites .cites__form form .form__item--container .form__item--FlexContainer .item__form textarea:valid {
+  border-bottom: 1px solid rgb(0, 48, 75);
+}
+.cites .cites__form form .form__item--container .form__item--FlexContainer .item__form textarea {
+  resize: none;
+}
+.cites .cites__form form .form__item--container .form__item--FlexContainer .item__form button {
+  display: block;
+  margin: 11px auto;
+  padding: 7px 10px;
+  border: none;
+  background-color: #003b6a;
+  color: rgb(255, 255, 255);
+  width: 60%;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  font-family: sans-serif;
+}
+
+.faqs {
+  margin: auto;
+  padding: 5px;
+  width: 100%;
+}
+.faqs hgroup .texto {
+  margin-top: 20px;
+}
+.faqs hgroup .texto span {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+.faqs hgroup .texto span i {
+  margin-right: 5px;
+}
+.faqs .faqs__item {
+  margin: 25px auto;
+  width: 100%;
+  height: auto;
+  max-width: 750px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 20px;
+  height: 35px;
+  transition: height 0.3s;
+  overflow: hidden;
+  display: block;
+  interpolate-size: allow-keywords;
+}
+.faqs .faqs__item input[type=checkbox] {
+  display: none;
+}
+.faqs .faqs__item:has(input[type=checkbox]:checked) {
+  height: auto;
+}
+.faqs .faqs__item:has(input[type=checkbox]:checked) .faq__item--answer {
+  animation: show 0.3s 0.3s both;
+}
+.faqs .faqs__item .faq__item--cuestion {
+  width: 100%;
+  margin: auto;
+  padding: 10px 0;
+  border-radius: 6px 6px 0px 0px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  position: relative;
+}
+.faqs .faqs__item .faq__item--cuestion .mini-titulo {
+  text-align: left;
+  padding-left: 0;
+  margin-left: 0;
+  position: relative;
+}
+.faqs .faqs__item .faq__item--cuestion .mini-titulo i {
+  position: absolute;
+  right: 0;
+  font-size: 0.5rem;
+  bottom: 15px;
+  cursor: pointer;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.1333333333);
+  padding: 2px;
+}
+.faqs .faqs__item .faq__item--answer {
+  background-color: rgba(0, 0, 0, 0.0666666667);
+  padding: 5px 10px;
+  width: 100%;
+  margin: auto;
+  font-family: sans-serif;
+  line-height: 25px;
+  font-size: 1.1rem;
+}
+.faqs .faqs__item:last-child {
+  border-bottom: none;
+}
+
+@media screen and (min-width: 360px) {
+  .faqs .faqs__item .faq__item--cuestion .mini-titulo {
+    text-align: left;
+    padding-left: 0;
+    margin-left: 0;
+    position: relative;
+  }
+  .faqs .faqs__item .faq__item--cuestion .mini-titulo i {
+    bottom: 5px;
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .cites .cites__form form .form__item--container .form__item--FlexContainer .item__form {
+    width: 50%;
+    padding: 10px 5px;
+  }
+  .cites .cites__form form .form__item--container .form__item--FlexContainer .item__form textarea {
+    resize: none;
+    height: 70px;
+  }
+  .cites .cites__form form .form__item--container .form__item--FlexContainer .item__form button {
+    display: block;
+    margin: 11px auto;
+    padding: 7px 10px;
+    border: none;
+    background-color: #003b6a;
+    color: rgb(255, 255, 255);
+    width: 60%;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    font-family: sans-serif;
+  }
+}/*# sourceMappingURL=citas.css.map */

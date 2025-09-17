@@ -213,21 +213,19 @@ header .logo {
   width: 40%;
   height: 100%;
   position: relative;
-  top: -10px;
+  top: 30px;
   left: 10px;
 }
 header .logo img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  width: 50px;
-  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: auto;
+  height: 90px;
   margin-bottom: 4px;
 }
 header .logo .logo__title {
-  display: block;
-  width: 100%;
+  display: inline-block;
+  width: auto;
   font-weight: 700;
   font-size: 1rem;
   color: rgb(255, 255, 255);
@@ -525,14 +523,15 @@ footer .copy {
 @media screen and (min-width: 480px) {
   header .logo {
     flex-wrap: nowrap;
+    align-items: center;
+    width: 50%;
+    top: 10px;
   }
   header .logo img {
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: center;
        object-position: center;
-    width: 90px;
-    height: 60px;
     margin-bottom: 4px;
   }
   header .logo .logo__title {
@@ -589,7 +588,6 @@ footer .copy {
   }
   header .logo .logo__title {
     display: block;
-    width: 100%;
     font-weight: 700;
     font-size: 1rem;
     color: rgb(255, 255, 255);
@@ -705,6 +703,9 @@ footer .copy {
   header .menu .menu__list .menu__item .link__active {
     border-bottom: 1px solid rgb(255, 255, 255);
     background-color: transparent;
+  }
+  .bannerIndex {
+    padding-top: 20px;
   }
   .bannerIndex .bannerIndex__txt .max-titulo {
     font-size: 3.8rem;
@@ -1072,4 +1073,106 @@ footer .copy {
     text-align: center;
     width: 17%;
   }
-}/*# sourceMappingURL=conocenos.css.map */
+}
+.contact {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+.contact .contact__infoContainer {
+  width: 100%;
+  margin: auto;
+  padding: 8px;
+  font-family: sans-serif;
+  font-size: 1.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+  align-content: center;
+  flex-direction: row;
+  gap: 15px;
+}
+.contact .contact__infoContainer .contact__infoItem {
+  width: 100%;
+}
+.contact .contact__infoContainer .contact__infoItem:first-child {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1333333333);
+}
+.contact .contact__infoContainer .contact__infoItem:first-child .texto:first-child::first-letter {
+  font-size: 5rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 56, 113, 0.986);
+  border-radius: 10px;
+  padding: 5px 3px;
+  margin: 0px 3px 0% 0px;
+  initial-letter: 3;
+}
+.contact .contact__form {
+  width: 100%;
+  height: auto;
+  margin: 5px auto;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-flow: wrap row;
+}
+.contact .contact__form .contact__form--img {
+  display: none;
+}
+.contact .contact__form .contact__form--form {
+  width: 100%;
+  margin: auto;
+}
+.contact .contact__form .contact__form--form form {
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+}
+.contact .contact__form .contact__form--form form label {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  font-size: 1.1rem;
+}
+.contact .contact__form .contact__form--form form input, .contact .contact__form .contact__form--form form textarea, .contact .contact__form .contact__form--form form select {
+  width: 100%;
+  padding: 3px 6px;
+  border: none;
+  border-bottom: 1px solid rgb(76, 144, 205);
+  outline: none;
+  transition: border-bottom 0.3s;
+  font-size: 1.1rem;
+}
+.contact .contact__form .contact__form--form form input::-moz-placeholder, .contact .contact__form .contact__form--form form textarea::-moz-placeholder, .contact .contact__form .contact__form--form form select::-moz-placeholder {
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.contact .contact__form .contact__form--form form input::placeholder, .contact .contact__form .contact__form--form form textarea::placeholder, .contact .contact__form .contact__form--form form select::placeholder {
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.contact .contact__form .contact__form--form form input:valid, .contact .contact__form .contact__form--form form textarea:valid, .contact .contact__form .contact__form--form form select:valid {
+  border-bottom: 1px solid rgb(0, 48, 75);
+}
+.contact .contact__form .contact__form--form form textarea {
+  resize: none;
+}
+.contact .contact__form .contact__form--form form button {
+  display: block;
+  margin: 11px auto;
+  padding: 7px 10px;
+  border: none;
+  background-color: #003b6a;
+  color: rgb(255, 255, 255);
+  width: 60%;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  font-family: sans-serif;
+}/*# sourceMappingURL=contacto.css.map */

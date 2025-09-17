@@ -4,6 +4,10 @@ $color__blanco: rgb(255, 255, 255);
 $color__rojo: rgb(226, 0, 21);
 $color__azulOscuro2: #003b6a;
 
+body {
+    box-shadow: 3px 6px 4px 10px #000;
+}
+
 .banner {
     width: 100%;
     height: 100dvh;
@@ -210,18 +214,17 @@ header {
         width: 40%;
         height: 100%;
         position: relative;
-        top: -10px;
+        top:  30px;
         left: 10px;
         img {
-            object-fit: cover;
-            object-position: center;
-            width: 50px;
-            height: 50px;
+            object-fit: contain;
+            width: auto;
+            height: 90px;
             margin-bottom: 4px;
         }
         .logo__title {
-            display: block;
-            width: 100%;
+            display: inline-block;
+            width: auto;
             font-weight: 700;
             font-size: 1rem;
             color: $color__blanco;
@@ -280,7 +283,20 @@ header {
                 margin: auto;
                 text-align: center;
                 width: 100%;
-              
+                &:nth-child(3) {
+                    width: 100%;
+                    height: 40px;
+                    interpolate-size: allow-keywords;
+                    overflow: hidden;
+                    transition: height .3s;
+                    &:hover {
+                        height: auto;
+                    }
+                    a {
+                        width: auto;
+                        display: inline-block;
+                    }
+                }
                 a {
                     display: block;
                     width: 100%;
@@ -302,18 +318,24 @@ header {
                 }
                 .link__active {
                     background-color: $color__azulOscuro;
-                    border: none !important;
+                    border-bottom: none;
                 }
                 a:hover i {
                     transform: rotate(180deg);
                 }
                 .submenu {
+                    interpolate-size: allow-keywords;
                     background-color: #243e5496;
                     border-bottom: 1px solid #fff6;
                     border-top: 1px solid #fff6;
+                
                     .submenu__item {
                         border-bottom: 1px solid #fff3;
                         border-top: 1px solid #fff3;
+                        a {
+                            width: 100%;
+                            display: inline-block;
+                        }
                         a:hover {
                             background-color: #fff2;
                         }
@@ -511,24 +533,32 @@ footer {
             }
         }
     }
+    .copy {
+        width: 100%;
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        padding: 10px 0;
+       border-top: 1px solid $color__blanco;
+    }
 }
 
 // responsive model
 
-@media screen and (min-width: 360px) {
-}
 @media screen and (min-width: 480px) {
     header {
         .logo {
             flex-wrap: nowrap;
+            align-items: center;
+            width: 50%;
+            top: 10px;
             img {
                 object-fit: cover;
                 object-position: center;
-                width: 90px;
-                height: 60px;
                 margin-bottom: 4px;
             }
             .logo__title {
+                
                 margin-left: 10px;
                 font-size: 1.1rem;
             }
@@ -583,7 +613,12 @@ footer {
             .container__flex {
                 .column__33 {
                     width: 30%;
-                    
+                .links__service {
+                    a {
+                        display: block;
+                        margin-bottom: 10px;
+                    }
+                }        
                 }
             }
         }
@@ -597,7 +632,7 @@ footer {
             width: 25%;
             .logo__title {
                 display: block;
-                width: 100%;
+                
                 font-weight: 700;
                 font-size: 1rem;
                 color: $color__blanco;
@@ -641,9 +676,66 @@ footer {
                     text-align: center;
                     width: auto;
                     height: 100%;
+                    &:nth-child(3) {
+                        width: auto;
+                        height: 100%;
+                        
+                        interpolate-size: allow-keywords;
+                        overflow: hidden;
+                        transition: height .3s;
+                        &:hover {
+                            height: 100%;
+                        }
+                        a {
+                            width: auto;
+                            display: block;
+                        }
+                        .submenu {
+                            position: absolute;
+                            display: flex;
+                            width: 100%;
+                            height: 100px;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            justify-content: space-around;
+                            align-items: center;
+                            background-color: $color__azulOscuro;
+                            left: 0;
+                            right: 0;
+                            margin: auto;
+                            transform: translateX(100%);
+                            transition: transform .3s;
+                            .submenu__item {
+                                width: 20%;
+                                list-style: none;
+                                background-color: transparent;
+                                transition: background-color .3s;
+                                border-bottom: none;
+                                border-top: none;
+                                height: 100%;
+                                
+                                display: flex;
+                                align-content: center;
+                                align-items: center;
+                                justify-content: center;
+                                a {
+                                    background-color: transparent;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                                a:hover {
+                                    background-color: #fff2;
+                                }
+                            }
+                        }
+                        &:hover .submenu {
+                            transform: translateX(0%);
+                        }
+                    }
                     a {
                         display: block;
                         padding: 20px 5px;
+                        border-bottom: 1px solid transparent;
                         transition: border-bottom .7s;
                         &:hover {
                            border-bottom: 1px solid $color__blanco;
@@ -651,21 +743,11 @@ footer {
                         }
                         i {
                             position: relative;
-                            
                         }   
                     }
                     .link__active {
                         border-bottom: 1px solid $color__blanco;
-                    }
-
-                    .submenu {
-                        display: none;
-                        background-color: $color__azulOscuro;
-                        .submenu__item {
-                            a:hover {
-                                background-color: #fff2;
-                            }
-                        }
+                        background-color: transparent;
                     }
                 }
 
@@ -673,6 +755,7 @@ footer {
         }
     }
     .bannerIndex {
+        padding-top: 20px;
         .bannerIndex__txt {
             .max-titulo {
             font-size: 3.8rem;
